@@ -4,6 +4,9 @@ title: Bloom Filter - probability and benchmarks
 categories: [Data Structures/Algorithms]
 ---
 
+
+Bloom filters are a data structure which allows you to test whether an element exists in a set, with lower memory usage and better access times than other hash table implementations. It is probabilistic, and while it can guarantee negative matches, there is a slight chance it returns a false positive match. Through clever mathematical assumptions, we can produce constraints to minimise the chance of a false positive.
+
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
@@ -17,14 +20,13 @@ MathJax.Hub.Config({
 $\newcommand{\pbrac}[1]{\left(#1\right)}$
 $\newcommand{\sbrac}[1]{\left[#1\right]}$
 
-Bloom filters are a data structure which allows you to test whether an element exists in a set, with lower memory usage and better access times than other hash table implementations. It is probabilistic, and while it can guarantee negative matches, there is a slight chance it returns a false positive match. Through clever mathematical assumptions, we can produce constraints to minimise the chance of a false positive.
-
 **Contents**
 1. [Description](#description)
 2. [Proof](#proof)
 3. [Implementation and benchmarks](#implementation-and-benchmarks)
 
 <br/><br/>
+
 ## Description
 
 Let there be a set of elements $N$, and we wish to store each element $e \in N$ in the set $F$. To do this, we introduce the set $K$ which has $k$ number of hash functions which hash the same element to _different_ values.
