@@ -17,9 +17,6 @@ MathJax.Hub.Config({
 </script>
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
-$\newcommand{\pbrac}[1]{\left(#1\right)}$
-$\newcommand{\sbrac}[1]{\left[#1\right]}$
-
 **Contents**
 1. [Description](#description)
 2. [Proof](#proof)
@@ -53,6 +50,9 @@ Once an element is placed in $F$, it will remain there, as flipping bits to remo
 
 ## Proof
 Note: This section is pretty math heavy, if you just want to look at the cool tables and graphs then you can skip ahead to [here](#implementation-and-benchmarks).
+
+$\newcommand{\pbrac}[1]{\left(#1\right)}$
+$\newcommand{\sbrac}[1]{\left[#1\right]}$
 
 ### First attempt
 Assume that a hash function in $K$ maps to each array position with _equal probability_. The probability that a bit is not set by a hash function during the insertion of an element is:
